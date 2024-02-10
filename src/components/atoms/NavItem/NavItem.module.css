@@ -1,0 +1,12 @@
+.root {
+  text-decoration: none;
+  padding: 17px 0;
+  color: var(--white);
+}
+
+.text {
+  margin: 0;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  font-weight: 600;
+}

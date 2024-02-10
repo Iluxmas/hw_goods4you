@@ -1,0 +1,41 @@
+.root {
+  position: relative;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 92px;
+  background-color: var(--purple);
+}
+
+.wrapper {
+  z-index: 10;
+  position: relative;
+}
+
+.contentWrapper {
+  margin-top: 100px;
+  max-width: 580px;
+}
+
+.subtitle {
+  max-width: 380px;
+  color: var(--white);
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.button {
+  margin-left: 14.5px;
+}
+
+.backgroundText {
+  position: absolute;
+  z-index: 1;
+  font-size: 200px;
+  font-weight: 700;
+  color: var(--white);
+  opacity: 0.12;
+  margin: 0;
+  bottom: 40px;
+  left: 50%;
+  translate: -50%;
+}

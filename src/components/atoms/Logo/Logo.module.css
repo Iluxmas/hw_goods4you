@@ -1,0 +1,10 @@
+.root {
+}
+
+.text {
+  color: var(--white);
+  margin: 0;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.44;
+}

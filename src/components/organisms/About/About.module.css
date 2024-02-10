@@ -1,0 +1,43 @@
+.root {
+  /* padding: 222px 0 150px; */
+  background-color: var(--purple);
+  position: relative;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.textBlock {
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.subtitle {
+  max-width: 380px;
+  margin-top: 8px;
+  margin-bottom: 42px;
+  white-space: pre-line;
+}
+
+.cite {
+  align-self: flex-end;
+}
+
+.decor {
+  position: absolute;
+  top: 0;
+}
+
+.imageWrapper {
+  width: 680px;
+  height: 580px;
+  overflow: hidden;
+  /* background-color: var(--white); */
+  clip-path: polygon(26% 0%, 100% 0%, 74% 100%, 0% 100%);
+  /*  */
+}

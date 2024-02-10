@@ -1,3 +1,10 @@
 .root {
+  color: var(--dark-gray);
+  user-select: none;
   font-weight: 600;
+  margin: 0;
+
+  &.white {
+    color: var(--white);
+  }
 }

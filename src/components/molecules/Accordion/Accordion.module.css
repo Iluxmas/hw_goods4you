@@ -1,0 +1,8 @@
+.root {
+  border: solid var(--faq-gray);
+  border-width: 1px 0 1px 0;
+
+  & > div:not(:last-of-type) {
+    border-bottom: 1px solid var(--faq-gray);
+  }
+}

@@ -1,6 +1,16 @@
 .root {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 8px;
+  padding-top: 15px;
   border-bottom: 1px solid var(--white-50);
 }

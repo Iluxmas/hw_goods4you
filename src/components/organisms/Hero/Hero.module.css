@@ -1,24 +1,22 @@
 .root {
   position: relative;
   width: 100%;
-  padding-top: 15px;
-  padding-bottom: 92px;
   background-color: var(--purple);
 }
 
 .wrapper {
   z-index: 10;
+  padding-top: 164px;
+  padding-bottom: 92px;
   position: relative;
 }
 
 .contentWrapper {
-  margin-top: 100px;
   max-width: 580px;
 }
 
 .subtitle {
   max-width: 380px;
-  color: var(--white);
   margin-top: 20px;
   margin-bottom: 40px;
 }

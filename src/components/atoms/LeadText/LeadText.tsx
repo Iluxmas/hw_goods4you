@@ -2,9 +2,9 @@ import s from './LeadText.module.css';
 
 function LeadText() {
   return (
-    <p className={s.root}>
+    <h1 className={s.root}>
       Any products from famous brands with worldwide delivery
-    </p>
+    </h1>
   );
 }
 

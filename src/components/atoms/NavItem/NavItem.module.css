@@ -1,7 +1,11 @@
 .root {
   text-decoration: none;
-  padding: 17px 0;
   color: var(--white);
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .text {

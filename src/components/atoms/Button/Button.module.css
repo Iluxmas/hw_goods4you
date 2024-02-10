@@ -5,9 +5,11 @@
   background-color: transparent;
   white-space: nowrap;
   font-size: 1rem;
+  transition: opacity 0.2s ease;
 
   &:hover {
     cursor: pointer;
+    opacity: 0.8;
   }
 
   &.primary {

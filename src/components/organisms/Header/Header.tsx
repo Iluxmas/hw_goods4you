@@ -1,15 +1,18 @@
 import Logo from '@atoms/Logo/Logo';
 import NavBar from '@molecules/NavBar/NavBar';
-import { headerNavbarConfig } from '@/constants/navbarConfigs';
+import { headerNavbarLinks } from '@/constants/navbarLinks';
+import Container from '@/components/atoms/Container/Container';
 
 import s from './Header.module.css';
 
 function Header() {
   return (
-    <div className={s.root}>
-      <Logo />
-      <NavBar config={headerNavbarConfig} />
-    </div>
+    <header className={s.root}>
+      <Container className={s.wrapper}>
+        <Logo />
+        <NavBar config={headerNavbarLinks} />
+      </Container>
+    </header>
   );
 }
 

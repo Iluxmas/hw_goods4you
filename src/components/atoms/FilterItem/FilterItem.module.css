@@ -1,0 +1,13 @@
+.root {
+  width: 50%;
+  box-sizing: border-box;
+  border: solid var(--border-peach);
+  border-width: 0 1px 1px 0;
+  margin-bottom: -1px;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 28px;
+  padding-bottom: 24px;
+}

@@ -1,0 +1,22 @@
+.root {
+  position: relative;
+  background-color: var(--purple);
+  padding-top: 60px;
+  padding-bottom: 240px;
+}
+
+.wrapper {
+  z-index: 50;
+  position: relative;
+}
+
+.heading {
+  margin-bottom: 26px;
+}
+
+.decor {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}

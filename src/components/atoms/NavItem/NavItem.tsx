@@ -1,4 +1,3 @@
-import React from 'react';
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
 
@@ -9,6 +8,7 @@ type Props = {
   text: string;
   className?: string;
 };
+
 function NavItem({ text, className, href }: Props) {
   return (
     <Link to={href} className={clsx(s.root, className)}>

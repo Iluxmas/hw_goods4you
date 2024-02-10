@@ -25,18 +25,11 @@ body {
   --white: #fff;
   --white-50: rgba(255, 255, 255, 0.5);
   --dark-gray: #444b58;
+  --faq-gray: #242424;
+  --gray-secondary: #808080;
   --brand-red: #f14f4f;
   --biege: #fff4ee;
   --purple: #484283;
   --border-peach: #dbbba9;
-  --gray40: #e3e3e3;
-  --gray60: #aeaeb2;
-  --gray90: #3c3c43;
-  --shadow-gray: #c9c9e3;
-  --red: #fe3b30;
-  --btn-disabled: #9695a2;
-  --blackMain: #313131;
-  --yellow: #ffc717;
-  --green: #28b772;
-  --gray70-22: rgba(182, 182, 201, 0.22);
+  --fade-50: rgba(36, 36, 36, 0.5);
 }

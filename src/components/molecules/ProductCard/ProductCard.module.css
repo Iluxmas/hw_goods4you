@@ -1,0 +1,10 @@
+.root {
+  display: flex;
+  flex-direction: column;
+}
+.image {
+  margin-bottom: 10px;
+}
+.title {
+  margin-bottom: 3px;
+}

@@ -8,11 +8,11 @@ type Props = {
 
 function NavBar({ config }: Props) {
   return (
-    <div className={s.root}>
-      {config.map((item) => (
-        <NavItem href={item.href} text={item.text} />
+    <nav className={s.root}>
+      {config.map((item, idx) => (
+        <NavItem key={idx} href={item.href} text={item.text} />
       ))}
-    </div>
+    </nav>
   );
 }
 

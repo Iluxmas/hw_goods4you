@@ -1,0 +1,9 @@
+.root {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  & > div:nth-child(3n + 2) {
+    transform: translateY(100px);
+  }
+}

@@ -1,0 +1,13 @@
+.root {
+  padding: 54px 0;
+}
+
+.heading {
+  margin-bottom: 33px;
+}
+
+.wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}

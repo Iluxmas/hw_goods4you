@@ -1,18 +1,26 @@
-import Hero from '@/components/organisms/Hero/Hero';
-import './App.css';
-import Button from '@atoms/Button/Button';
+import FAQ from '@organisms/FAQ/FAQ';
+import Hero from '@organisms/Hero/Hero';
+import Quiz from '@organisms/Quiz/Quiz';
+import Team from '@organisms/Team/Team';
+import About from '@organisms/About/About';
+import Footer from '@organisms/Footer/Footer';
+import Catalog from '@organisms/Catalog/Catalog';
+import Header from '@/components/organisms/Header/Header';
+
+import s from './root.module.css';
 
 function Root() {
   return (
-    <>
+    <div className={s.page}>
+      <Header />
       <Hero />
-      <div className="App">
-        <Button text="Go to shopping" />
-        <Button text="Go to shopping" intent="outline" />
-        <Button text="Go to shopping" intent="secondary" />
-        <Button text="Go to shopping" intent="link" />
-      </div>
-    </>
+      <Catalog />
+      <About />
+      <Quiz />
+      <Team />
+      <FAQ />
+      <Footer />
+    </div>
   );
 }
 

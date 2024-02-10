@@ -4,12 +4,15 @@ import clsx from 'clsx';
 import s from './Subtitle.module.css';
 
 type Props = {
-  className: string;
+  white?: boolean;
+  className?: string;
   children: ReactNode;
 };
 
-function Subtitle({ children, className }: Props) {
-  return <p className={clsx(s.root, className)}>{children}</p>;
+function Subtitle({ children, className, white }: Props) {
+  return (
+    <p className={clsx(s.root, white && s.white, className)}>{children}</p>
+  );
 }
 
 export default Subtitle;

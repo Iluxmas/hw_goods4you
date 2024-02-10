@@ -1,0 +1,7 @@
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  border: solid var(--border-peach);
+  border-width: 1px 0 0 1px;
+  margin-bottom: 32px;
+}

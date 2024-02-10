@@ -1,4 +1,4 @@
-export const footerNavbarConfig = [
+export const footerNavbarLinks = [
   { text: 'Catalog', href: '/' },
   { text: 'About us', href: '/' },
   { text: 'Product selection', href: '/' },
@@ -7,7 +7,7 @@ export const footerNavbarConfig = [
   { text: 'Contacts', href: '/' },
 ];
 
-export const headerNavbarConfig = [
+export const headerNavbarLinks = [
   { text: 'Catalog', href: '/' },
   { text: 'About us', href: '/' },
   { text: 'Product selection', href: '/' },

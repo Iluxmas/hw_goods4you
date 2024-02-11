@@ -1,13 +1,29 @@
 .root {
-  max-width: 280px;
+  width: 100%;
   box-sizing: border-box;
   padding: 9px 20px 20px;
   background-color: var(--biege);
   display: flex;
   flex-direction: column;
   flex-grow: 0;
-}
 
+  @media screen and (min-width: 768px) {
+    max-width: 210px;
+  }
+  @media screen and (min-width: 1024px) {
+    max-width: 280px;
+  }
+}
+.buttonsContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+  }
+}
 .heading {
   margin-bottom: 25px;
 }
@@ -17,5 +33,8 @@
 }
 
 .button {
-  margin-bottom: 35px;
+  @media screen and (min-width: 768px) {
+    margin: 0 auto 35px;
+    width: 100%;
+  }
 }

@@ -19,7 +19,7 @@ function CheckBox({ onToggle, label }: Props) {
 
   return (
     <label className={s.root}>
-      <span className={s.checkbox}>
+      <span className={s.checkbox} aria-label={`choose ${label} product`}>
         {isChecked && <Checked className={s.icon} />}
       </span>
       <Title text={label} />

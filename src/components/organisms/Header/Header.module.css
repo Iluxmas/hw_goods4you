@@ -1,16 +1,57 @@
 .root {
-  z-index: 100;
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
+  background-color: var(--purple);
+
+  @media screen and (min-width: 768px) {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
 }
 
 .wrapper {
   display: flex;
   align-items: center;
+  gap: 16px;
   justify-content: space-between;
   padding-bottom: 8px;
   padding-top: 15px;
   border-bottom: 1px solid var(--white-50);
+}
+
+.navbarWrapper {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+
+  @media screen and (min-width: 1024px) {
+    gap: 36px;
+  }
+}
+
+.navbar {
+  display: none;
+
+  @media screen and (min-width: 1024px) {
+    display: flex;
+  }
+}
+
+.burgerButton {
+  background-color: transparent;
+  border: none;
+  width: min-content;
+  display: flex;
+  margin-left: 24px;
+
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.burgerIcon {
+  width: 28px;
+  height: 28px;
 }

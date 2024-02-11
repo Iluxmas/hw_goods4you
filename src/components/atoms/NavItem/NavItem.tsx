@@ -11,7 +11,10 @@ type Props = {
 
 function NavItem({ text, className, href }: Props) {
   return (
-    <Link to={href} className={clsx(s.root, className)}>
+    <Link
+      to={href}
+      className={clsx(s.root, className)}
+      aria-label={`navigate to ${text}`}>
       <p className={s.text}>{text}</p>
     </Link>
   );

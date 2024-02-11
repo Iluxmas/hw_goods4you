@@ -4,7 +4,30 @@
 
 .wrapper {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
   justify-content: space-between;
-  padding: 19px 0;
+  padding: 19px 16px;
+
+  @media screen and (min-width: 768px) {
+    align-items: center;
+  }
+
+  @media screen and (min-width: 960px) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 1212px) {
+    padding: 19px 0;
+  }
+}
+
+.navbar {
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 }

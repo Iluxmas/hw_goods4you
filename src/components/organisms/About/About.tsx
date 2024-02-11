@@ -21,7 +21,7 @@ function About() {
           <Cite text="Goods4you" className={s.cite} />
         </div>
         <div className={s.imageWrapper}>
-          <Image src={Background} />
+          <Image src={Background} className={s.image} />
         </div>
       </Container>
       <Decor className={s.decor} />

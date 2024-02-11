@@ -1,10 +1,10 @@
 import React from 'react';
-import { ReactComponent as ExpandIcon } from '@/icons/expand.svg';
+// import { ReactComponent as ExpandIcon } from '@/icons/expand.svg';
+import clsx from 'clsx';
 import { TFAQItem } from '@/types/faqItem';
+import Subtitle from '../Subtitle/Subtitle';
 
 import s from './AccordionItem.module.css';
-import Subtitle from '../Subtitle/Subtitle';
-import clsx from 'clsx';
 
 type Props = {
   isOpen: boolean;
@@ -16,10 +16,10 @@ function AccordionItem({ question, answer, isOpen, onToggle }: Props) {
     <div className={s.root}>
       <div className={s.header}>
         <p className={s.question}>{question}</p>
-        <ExpandIcon
+        <button
           onClick={onToggle}
-          className={clsx(s.expand, isOpen && s.iconOpen)}
-        />
+          aria-label="Toggle FAQ answer view"
+          className={clsx(s.expandBtn, isOpen && s.open)}></button>
       </div>
       <div className={clsx(s.footer, isOpen && s.open)}>
         <Subtitle className={s.answer}>{answer}</Subtitle>

@@ -1,7 +1,16 @@
 .root {
   display: flex;
-  flex-wrap: wrap;
+  overflow-y: scroll;
+  scroll-snap-type: x mandatory;
   border: solid var(--border-peach);
   border-width: 1px 0 0 1px;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
+  padding-bottom: 1px;
+
+  @media screen and (min-width: 768px) {
+    overflow-y: hidden;
+    margin-bottom: 32px;
+    grid-template-columns: 1fr 1fr;
+    flex-wrap: wrap;
+  }
 }

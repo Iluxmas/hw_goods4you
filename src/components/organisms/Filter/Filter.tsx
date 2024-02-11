@@ -14,8 +14,10 @@ function Filter() {
       </BlockHeading>
       <Title text="Category" className={s.title} />
       <FilterList />
-      <Button text="Apply" intent="secondary" className={s.button} />
-      <Button text="Reset" intent="link" />
+      <div className={s.buttonsContainer}>
+        <Button text="Apply" intent="secondary" className={s.button} />
+        <Button text="Reset" intent="link" />
+      </div>
     </div>
   );
 }

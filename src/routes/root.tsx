@@ -4,8 +4,8 @@ import Quiz from '@organisms/Quiz/Quiz';
 import Team from '@organisms/Team/Team';
 import About from '@organisms/About/About';
 import Footer from '@organisms/Footer/Footer';
+import Header from '@organisms/Header/Header';
 import Catalog from '@organisms/Catalog/Catalog';
-import Header from '@/components/organisms/Header/Header';
 
 import s from './root.module.css';
 

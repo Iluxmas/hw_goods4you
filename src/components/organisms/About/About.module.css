@@ -1,27 +1,46 @@
 .root {
-  /* padding: 222px 0 150px; */
   background-color: var(--purple);
   position: relative;
+  overflow: hidden;
 }
+
 .wrapper {
+  z-index: 10;
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: space-between;
+  padding-top: 32px;
+  margin-bottom: -30px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+    padding-top: 0;
+    flex-direction: row;
+  }
 }
 
 .textBlock {
   width: 100%;
-  max-width: 460px;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  @media screen and (min-width: 1024px) {
+    max-width: 460px;
+  }
 }
 
 .subtitle {
   max-width: 380px;
   margin-top: 8px;
-  margin-bottom: 42px;
+  margin-bottom: 24px;
   white-space: pre-line;
+
+  @media screen and (min-width: 1024px) {
+    margin-bottom: 42px;
+  }
 }
 
 .cite {
@@ -30,14 +49,28 @@
 
 .decor {
   position: absolute;
+  z-index: 2;
   top: 0;
 }
 
 .imageWrapper {
-  width: 680px;
-  height: 580px;
-  overflow: hidden;
-  /* background-color: var(--white); */
-  clip-path: polygon(26% 0%, 100% 0%, 74% 100%, 0% 100%);
-  /*  */
+  width: 120%;
+  height: auto;
+  margin-left: -24px;
+  display: flex;
+  clip-path: polygon(0% 0%, 100% 26%, 100% 100%, 0% 74%);
+  transform: translateY(-30px);
+
+  @media screen and (min-width: 768px) {
+    overflow: hidden;
+    flex-direction: row;
+    transform: translateY(0) scale(1.05) translateX(30px);
+    clip-path: polygon(26% 0%, 95% 0%, 74% 100%, 5% 100%);
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 680px;
+    height: 580px;
+    clip-path: polygon(26% 0%, 100% 0%, 74% 100%, 0% 100%);
+  }
 }

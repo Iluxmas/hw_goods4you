@@ -1,7 +1,22 @@
 .root {
   margin: 0;
+  width: 100%;
+  max-width: 100%;
   color: var(--white);
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 400;
-  max-width: 580px;
+  white-space: normal;
+  word-wrap: break-word;
+  text-justify: auto;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    font-size: 30px;
+    text-align: left;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 36px;
+    max-width: 580px;
+  }
 }

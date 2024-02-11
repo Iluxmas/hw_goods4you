@@ -15,7 +15,11 @@ function Hero() {
             We sell smartphones, laptops, clothes, shoes and many other products
             at low prices
           </Subtitle>
-          <Button text="Go to shopping" className={s.button} />
+          <Button
+            text="Go to shopping"
+            aria-label="Go to shopping"
+            className={s.button}
+          />
         </div>
       </Container>
       <p className={s.backgroundText}>Goods4you</p>

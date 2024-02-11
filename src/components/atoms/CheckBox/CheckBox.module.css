@@ -6,6 +6,10 @@
   &:hover {
     opacity: 0.85;
   }
+
+  &:has(input:focus) > span {
+    outline: 2px solid var(--dark-gray);
+  }
 }
 
 .checkbox {
@@ -27,6 +31,7 @@
   white-space: nowrap;
   width: 1px;
 }
+
 .icon {
   position: absolute;
   top: 1px;

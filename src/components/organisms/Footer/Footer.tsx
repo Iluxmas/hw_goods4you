@@ -1,7 +1,6 @@
 import Logo from '@atoms/Logo/Logo';
 import NavBar from '@molecules/NavBar/NavBar';
 import Container from '@atoms/Container/Container';
-import { footerNavbarLinks } from '@/constants/navbarLinks';
 
 import s from './Footer.module.css';
 
@@ -10,7 +9,7 @@ function Footer() {
     <footer className={s.root}>
       <Container className={s.wrapper}>
         <Logo />
-        <NavBar config={footerNavbarLinks} />
+        <NavBar className={s.navbar} />
       </Container>
     </footer>
   );

@@ -1,0 +1,23 @@
+.root {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  height: 14px;
+  width: 17px;
+  border-radius: 50%;
+  bottom: -6px;
+  right: -6px;
+  background-color: var(--brand-red);
+  color: var(--white);
+  font-size: 12px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 14px;
+}

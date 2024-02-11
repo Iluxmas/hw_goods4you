@@ -3,10 +3,18 @@
   color: var(--dark-gray);
   user-select: none;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 22px;
   line-height: 1.44;
 
   &.white {
     color: var(--white);
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    font-size: 30px;
   }
 }

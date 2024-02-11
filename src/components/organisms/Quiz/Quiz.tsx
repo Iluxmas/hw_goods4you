@@ -39,7 +39,7 @@ function Quiz() {
           />
         </div>
         <div className={s.footer}>
-          <div>1 of 3</div>
+          <div className={s.pagination}>1 of 3</div>
           <Button text="Next step" intent="outline" className={s.button} />
         </div>
       </Container>

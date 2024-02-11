@@ -37,12 +37,20 @@
 .subtitle {
   color: var(--gray-secondary);
 }
+
 .footer {
   display: flex;
   align-items: center;
   padding: 20px 0;
   justify-content: space-between;
 }
+
 .button {
   padding: 13.5px 42px;
+}
+
+.pagination {
+  color: var(--gray-secondary);
+  font-weight: 600;
+  font-size: 16px;
 }

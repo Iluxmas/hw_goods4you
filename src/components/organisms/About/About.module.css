@@ -22,7 +22,7 @@
 
 .textBlock {
   width: 100%;
-  max-width: 300px;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -33,13 +33,13 @@
 }
 
 .subtitle {
-  max-width: 380px;
   margin-top: 8px;
   margin-bottom: 24px;
   white-space: pre-line;
 
   @media screen and (min-width: 1024px) {
     margin-bottom: 42px;
+    max-width: 380px;
   }
 }
 

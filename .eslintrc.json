@@ -3,22 +3,41 @@
     "prettier",
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:storybook/recommended"
   ],
   "root": true,
-  "env": { "browser": true, "es2020": true },
-  "ignorePatterns": ["dist", ".eslintrc.cjs"],
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "ignorePatterns": [
+    "dist",
+    ".eslintrc.cjs"
+  ],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "prettier"],
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+  ],
   "rules": {
-    "prettier/prettier": ["off"],
+    "prettier/prettier": [
+      "off"
+    ],
     "security/detect-object-injection": "off",
-    "max-len": ["off", { "code": 120 }],
+    "max-len": [
+      "off",
+      {
+        "code": 120
+      }
+    ],
     "react/jsx-filename-extension": "off",
     "no-useless-escape": "off",
     "import/order": "off",
     "no-empty-pattern": "off",
-    "@typescript-eslint/no-unused-vars": ["error"],
+    "@typescript-eslint/no-unused-vars": [
+      "error"
+    ],
     "react/react-in-jsx-scope": "off",
     "import/no-extraneous-dependencies": "off",
     "@typescript-eslint/no-explicit-any": "off",

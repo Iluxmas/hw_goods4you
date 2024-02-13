@@ -6,12 +6,11 @@ import About from '@organisms/About/About';
 import Footer from '@organisms/Footer/Footer';
 import Header from '@organisms/Header/Header';
 import Catalog from '@organisms/Catalog/Catalog';
+import MainTemplate from '@templates/MainTemplate/MainTemplate';
 
-import s from './root.module.css';
-
-function Root() {
+function Main() {
   return (
-    <div className={s.page}>
+    <MainTemplate>
       <Header />
       <Hero />
       <Catalog />
@@ -20,8 +19,8 @@ function Root() {
       <Team />
       <FAQ />
       <Footer />
-    </div>
+    </MainTemplate>
   );
 }
 
-export default Root;
+export default Main;

@@ -7,7 +7,7 @@ import s from './FAQ.module.css';
 
 function FAQ() {
   return (
-    <section className={s.root}>
+    <section className={s.root} id="FAQ">
       <Container className={s.wrapper}>
         <Heading className={s.heading}>FAQ</Heading>
         <Accordion items={faqList} />

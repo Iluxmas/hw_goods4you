@@ -10,7 +10,7 @@ import s from './About.module.css';
 
 function About() {
   return (
-    <section className={s.root}>
+    <section className={s.root} id="ABOUT">
       <Container className={s.wrapper}>
         <div className={s.textBlock}>
           <Heading white>About us</Heading>

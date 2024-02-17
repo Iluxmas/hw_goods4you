@@ -1,0 +1,12 @@
+.header {
+  margin-bottom: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.discription {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}

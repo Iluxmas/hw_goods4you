@@ -16,9 +16,15 @@
   align-items: center;
   gap: 16px;
   justify-content: space-between;
-  padding-bottom: 8px;
-  padding-top: 15px;
-  border-bottom: 1px solid var(--white-50);
+  padding-top: 25px;
+  padding-bottom: 25px;
+  box-sizing: border-box;
+
+  &.home {
+    padding-bottom: 8px;
+    padding-top: 15px;
+    border-bottom: 1px solid var(--white-50);
+  }
 }
 
 .navbarWrapper {

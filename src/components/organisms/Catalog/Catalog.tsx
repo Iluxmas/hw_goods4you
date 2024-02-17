@@ -9,7 +9,7 @@ import s from './Catalog.module.css';
 
 function Catalog() {
   return (
-    <section className={s.root}>
+    <section className={s.root} id="CATALOG">
       <Container>
         <Heading className={s.heading}>Catalog</Heading>
         <div className={s.wrapper}>

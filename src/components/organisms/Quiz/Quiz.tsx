@@ -21,7 +21,7 @@ function Quiz() {
   };
 
   return (
-    <section className={s.root}>
+    <section className={s.root} id="SELECTION">
       <Container className={s.wrapper}>
         <div className={s.header}>
           <Heading>We will select the perfect product for you</Heading>

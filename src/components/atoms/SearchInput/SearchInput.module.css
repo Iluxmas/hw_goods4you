@@ -1,0 +1,12 @@
+.input {
+  width: 100%;
+  flex-grow: 1;
+  border: none;
+  background-color: var(--gray-90);
+  border-radius: 4px;
+  padding: 19px 17px;
+
+  &:placeholder {
+    color: var(--gray-60);
+  }
+}

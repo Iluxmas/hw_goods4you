@@ -8,7 +8,7 @@ import s from './Team.module.css';
 
 function Team() {
   return (
-    <section className={s.root}>
+    <section className={s.root} id="#OUR_TEAM">
       <Container className={s.wrapper}>
         <Heading white className={s.heading}>
           Our team

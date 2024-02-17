@@ -5,7 +5,7 @@
   background-color: transparent;
   white-space: nowrap;
   font-size: 1rem;
-  transition: opacity 0.2s ease;
+  transition: all 0.2s ease;
 
   &:hover {
     cursor: pointer;
@@ -19,22 +19,26 @@
 
   &.secondary {
     color: var(--white);
-    background-color: var(--dark-gray);
+    background-color: var(--gray-20);
   }
 
   &.outline {
-    color: var(--dark-gray);
-    border: 1px solid var(--dark-gray);
+    color: var(--gray-20);
+    border: 1px solid var(--gray-20);
   }
 
   &.link {
     padding: 0;
     border: none;
-    color: var(--dark-gray);
+    color: var(--gray-20);
     transition: all 0.2s ease;
 
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  &.loading {
+    filter: grayscale(50%);
   }
 }

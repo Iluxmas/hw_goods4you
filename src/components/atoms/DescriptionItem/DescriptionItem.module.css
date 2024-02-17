@@ -1,0 +1,21 @@
+.root {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+
+  & p {
+    margin: 0;
+  }
+}
+.title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.44;
+  color: var(--gray-60);
+}
+
+.text {
+  font-weight: 600;
+  color: var(--gray-20);
+}

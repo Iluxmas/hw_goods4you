@@ -12,7 +12,7 @@ body {
   background-color: var(--white);
   font-family: -apple-system, BlinkMacSystemFont, 'Jost', 'Arial', sans-serif;
   font-display: swap;
-  color: var(--dark-gray);
+  color: var(--gray-20);
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
@@ -24,9 +24,13 @@ body {
   --black: #000;
   --white: #fff;
   --white-50: rgba(255, 255, 255, 0.5);
-  --dark-gray: #444b58;
-  --faq-gray: #242424;
-  --gray-secondary: #808080;
+
+  --gray-10: #242424;
+  --gray-20: #444b58;
+  --gray-40: #808080;
+  --gray-60: #b2b5bb;
+  --gray-90: #f6f6f6;
+
   --brand-red: #f14f4f;
   --biege: #fff4ee;
   --purple: #484283;

@@ -1,29 +1,47 @@
-import { useState } from 'react';
 import Button from '@atoms/Button/Button';
+import Loader from '@atoms/loader/Loader';
+import { IProduct } from '@/shared/store/api/dto/apiDto';
 import ProductCard from '@molecules/ProductCard/ProductCard';
-import { TProduct } from '@/types/product';
 
 import s from './ProductsList.module.css';
 
 type Props = {
-  products: TProduct[];
+  isLoading?: boolean;
+  products?: IProduct[];
+  isLoadingMore?: boolean;
+  onLoadMore?: () => void;
 };
 
-function ProductsList({ products }: Props) {
-  const [showAmount, setShowAmount] = useState<number>(9);
-
+function ProductsList({
+  products,
+  isLoading,
+  onLoadMore,
+  isLoadingMore,
+}: Props) {
   return (
     <div className={s.root}>
-      <div className={s.wrapper}>
-        {products.slice(0, showAmount).map(({ photo, name, price, id }) => (
-          <ProductCard key={id} photo={photo} name={name} price={price} />
-        ))}
-      </div>
-      {showAmount < products.length && (
-        <Button
-          text="Show more"
-          onClick={() => setShowAmount((prev) => prev + 9)}
-        />
+      {isLoading ? (
+        <Loader size={64} />
+      ) : (
+        <>
+          <div className={s.wrapper}>
+            {products?.map(({ thumbnail, title, price, id }) => (
+              <ProductCard
+                key={id}
+                photo={thumbnail}
+                name={title}
+                price={price}
+              />
+            ))}
+          </div>
+          {products && (
+            <Button
+              text="Show more"
+              onClick={onLoadMore}
+              isLoading={isLoadingMore}
+            />
+          )}
+        </>
       )}
     </div>
   );

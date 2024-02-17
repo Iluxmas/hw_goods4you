@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import s from './NavItem.module.css';
 
 type Props = {
-  href: string;
+  href: string | { pathname: string; hash: string };
   text: string;
   className?: string;
   children?: React.ReactNode;

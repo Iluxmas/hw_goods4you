@@ -4,15 +4,23 @@ import s from './Button.module.css';
 type Props = {
   text: string;
   className?: string;
+  isLoading?: boolean;
   onClick?: () => void;
   intent?: 'primary' | 'secondary' | 'outline' | 'link';
 };
 
-function Button({ text, intent = 'primary', className, onClick }: Props) {
+function Button({
+  text,
+  onClick,
+  className,
+  isLoading,
+  intent = 'primary',
+}: Props) {
   return (
     <button
       type="button"
-      className={clsx(s.root, s[intent], className)}
+      disabled={isLoading}
+      className={clsx(s.root, s[intent], className, isLoading && s.loading)}
       onClick={onClick}>
       {text}
     </button>

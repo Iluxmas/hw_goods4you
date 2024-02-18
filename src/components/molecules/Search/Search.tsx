@@ -18,9 +18,10 @@ function Search({ onQueryChange, isLoading }: Props) {
     onQueryChange(debouncedQuery);
   }, [debouncedQuery]);
 
-  const handleKeyDown = (e: any) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    const target = e.target as HTMLInputElement;
     if (e.key == 'Enter') {
-      onQueryChange(e.target.value);
+      onQueryChange(target.value);
     }
   };
 

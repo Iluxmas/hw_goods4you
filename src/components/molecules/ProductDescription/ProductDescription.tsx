@@ -1,12 +1,18 @@
-import DescriptionItem from '@atoms/DescriptionItem/DescriptionItem';
+import { IProduct } from '@/shared/store/api/dto/apiDto';
 import BlockHeading from '@atoms/BlockHeading/BlockHeading';
+import { ReactComponent as StarIcon } from '@/icons/star.svg';
+import DescriptionItem from '@atoms/DescriptionItem/DescriptionItem';
 
 import s from './ProductDescription.module.css';
 
 const getFinalPrice = (pr: number, disc: number) =>
   ((pr * (100 - disc)) / 100).toFixed(2) + '$';
 
-function ProductDescription({ data }: any) {
+type Props = {
+  data: IProduct;
+};
+
+function ProductDescription({ data }: Props) {
   return (
     <div className={s.root}>
       <div className={s.header}>
@@ -14,7 +20,11 @@ function ProductDescription({ data }: any) {
         <DescriptionItem title="SKU ID" text={'000' + data.id} />
       </div>
       <div className={s.discription}>
-        <DescriptionItem title="Rating" text={data.rating} />
+        <DescriptionItem title="Rating">
+          {Array.from({ length: Math.floor(data.rating) }, (_) => (
+            <StarIcon />
+          ))}
+        </DescriptionItem>
         <DescriptionItem title="Base price" text={data.price + '$'} />
         <DescriptionItem
           title="Discount percentage"

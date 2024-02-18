@@ -12,7 +12,7 @@ type Props = {
 function CheckBox({ onToggle, label }: Props) {
   const [isChecked, setIsChecked] = useState(false);
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     onToggle(e.target.checked);
     setIsChecked(e.target.checked);
   };

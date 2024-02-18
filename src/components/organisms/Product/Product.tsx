@@ -1,13 +1,16 @@
 import Loader from '@atoms/loader/Loader';
 import Container from '@atoms/Container/Container';
 import Carousel from '@molecules/Carousel/Carousel';
+import { IProduct } from '@/shared/store/api/dto/apiDto';
 import ProductDescription from '@molecules/ProductDescription/ProductDescription';
 
 import s from './Product.module.css';
 
-function Product({ data }: any) {
-  console.log(data);
+type Props = {
+  data: IProduct | undefined;
+};
 
+function Product({ data }: Props) {
   if (!data) {
     return (
       <Container className={s.container}>

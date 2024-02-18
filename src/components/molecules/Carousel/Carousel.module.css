@@ -5,13 +5,19 @@
   max-height: 560px;
   flex-direction: column;
 }
+
 .wrapper {
   width: 100%;
   position: relative;
   font-size: 0;
+  max-height: 460px;
 
   &:hover > div {
     opacity: 0.4;
+  }
+
+  & img {
+    max-height: 460px;
   }
 }
 

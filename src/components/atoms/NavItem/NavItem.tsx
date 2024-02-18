@@ -10,7 +10,7 @@ type Props = {
 };
 
 function NavItem({ text, className, href, children }: Props) {
-  function scrollTo(element: any, to: any, duration: any) {
+  function scrollTo(element: HTMLElement, to: number, duration: number) {
     if (duration <= 0) return;
     const difference = to - element.scrollTop;
     const perTick = (difference / duration) * 10;

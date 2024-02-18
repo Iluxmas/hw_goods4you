@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import clsx from 'clsx';
 import Title from '@atoms/Title/Title';
 
@@ -11,7 +10,7 @@ type Props = {
 };
 
 function FilterItem({ text, onSelect, isChecked }: Props) {
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     onSelect(e.target.checked);
   };
 

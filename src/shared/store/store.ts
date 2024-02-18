@@ -5,11 +5,9 @@ import {
   ThunkAction,
 } from '@reduxjs/toolkit';
 
-import appDataSlice from './appDataSlice';
 import { baseApi } from './api/baseApi';
 
 const combinedReducer = combineReducers({
-  appDataSlice,
   [baseApi.reducerPath]: baseApi.reducer,
 });
 

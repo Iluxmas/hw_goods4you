@@ -45,8 +45,11 @@
   width: 75px;
   top: 0;
   bottom: 0;
-
   transition: opacity 0.2s ease;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   &.prev {
     left: 0;

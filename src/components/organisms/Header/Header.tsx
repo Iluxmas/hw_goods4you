@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import clsx from 'clsx';
+import { Link, useLocation } from 'react-router-dom';
 import Logo from '@atoms/Logo/Logo';
 import NavBar from '@molecules/NavBar/NavBar';
-import { Link, useLocation } from 'react-router-dom';
 import Container from '@atoms/Container/Container';
 import MobileMenu from '@organisms/MobileMenu/MobileMenu';
 import { ReactComponent as BurgerIcon } from '@/icons/burger-menu.svg';
@@ -20,10 +20,19 @@ function Header() {
       <Container className={s.wrapper}>
         <Logo />
         <div className={s.navbarWrapper}>
-          {isHomePage && <NavBar className={s.navbar} />}
-          <Link to="/products" className={s.link}>
-            For staff
-          </Link>
+          {isHomePage ? (
+            <>
+              <NavBar className={s.navbar} />{' '}
+              <Link to="/products" className={s.link}>
+                For staff
+              </Link>
+            </>
+          ) : (
+            <Link to="/" className={s.link}>
+              Back to site
+            </Link>
+          )}
+
           <button
             aria-label="Open nav menu"
             className={s.burgerButton}

@@ -1,22 +1,21 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Button from '@atoms/Button/Button';
 import Heading from '@atoms/Heading/Heading';
 import Subtitle from '@atoms/Subtitle/Subtitle';
 import Container from '@atoms/Container/Container';
 import BlockHeading from '@atoms/BlockHeading/BlockHeading';
 import OptionsList from '@organisms/OptionsList/OptionsList';
-import { options } from '@/constants/quizOptions';
 
 import s from './Quiz.module.css';
 
 function Quiz() {
-  const [selectedItems, setSelectedItems] = useState<number[]>([]);
+  const [selectedItems, setSelectedItems] = useState<string[]>([]);
 
-  const handleToggleCheckbox = (value: boolean, id: number) => {
+  const handleToggleCheckbox = (value: boolean, name: string) => {
     if (!value) {
-      setSelectedItems(selectedItems.filter((i) => i !== id));
+      setSelectedItems(selectedItems.filter((i) => i !== name));
     } else {
-      setSelectedItems(selectedItems.concat(id));
+      setSelectedItems(selectedItems.concat(name));
     }
   };
 
@@ -33,7 +32,6 @@ function Quiz() {
         <div className={s.content}>
           <BlockHeading>What type of product are you considering?</BlockHeading>
           <OptionsList
-            list={options}
             selected={selectedItems}
             onToggle={handleToggleCheckbox}
           />

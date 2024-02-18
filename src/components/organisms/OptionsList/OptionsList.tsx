@@ -1,19 +1,20 @@
 import QuizOption from '@molecules/QuizOption/QuizOption';
-import { TQuizOption } from '@/types/quizOption';
+import { useGetCategories } from '@/shared/store/api/productsApi';
 
 import s from './OptionsList.module.css';
 
 type Props = {
-  selected: number[];
-  list: TQuizOption[];
-  onToggle: (value: boolean, id: number) => void;
+  selected: string[];
+  onToggle: (value: boolean, name: string) => void;
 };
 
-function OptionsList({ list, onToggle }: Props) {
+function OptionsList({ onToggle }: Props) {
+  const { data } = useGetCategories();
+
   return (
     <div className={s.root}>
-      {list.map((item) => (
-        <QuizOption key={item.id} item={item} onToggle={onToggle} />
+      {data?.map((item, idx) => (
+        <QuizOption key={idx} item={item} onToggle={onToggle} />
       ))}
     </div>
   );

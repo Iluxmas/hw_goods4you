@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import Search from '@molecules/Search/Search';
-import Heading from '@atoms/Heading/Heading';
 import Container from '@atoms/Container/Container';
 import ProductsList from '@organisms/ProductsList/ProductsList';
 import { useGetWithFilter, useSearch } from '@/shared/store/api/productsApi';
@@ -43,7 +42,6 @@ function ProductsSearch() {
 
   return (
     <Container className={s.root}>
-      <Heading>All products</Heading>
       <Search onQueryChange={(val) => setQuery(val)} isLoading={isFetching} />
       <ProductsList
         products={query ? products : dataProducts?.products}

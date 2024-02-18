@@ -1,3 +1,7 @@
+.root {
+  width: 100%;
+}
+
 .header {
   margin-bottom: 48px;
   display: flex;

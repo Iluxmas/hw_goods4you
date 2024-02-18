@@ -4,7 +4,6 @@ import Carousel from '@molecules/Carousel/Carousel';
 import ProductDescription from '@molecules/ProductDescription/ProductDescription';
 
 import s from './Product.module.css';
-import Heading from '@atoms/Heading/Heading';
 
 function Product({ data }: any) {
   console.log(data);
@@ -18,7 +17,6 @@ function Product({ data }: any) {
   }
   return (
     <Container className={s.container}>
-      <Heading className={s.heading}>Product {data.id}</Heading>
       <div className={s.content}>
         <Carousel images={data.images} />
         <ProductDescription data={data} />

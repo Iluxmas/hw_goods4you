@@ -1,7 +1,7 @@
-import React from 'react';
-import s from './ProductDescription.module.css';
 import DescriptionItem from '@atoms/DescriptionItem/DescriptionItem';
 import BlockHeading from '@atoms/BlockHeading/BlockHeading';
+
+import s from './ProductDescription.module.css';
 
 const getFinalPrice = (pr: number, disc: number) =>
   ((pr * (100 - disc)) / 100).toFixed(2) + '$';

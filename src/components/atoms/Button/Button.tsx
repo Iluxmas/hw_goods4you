@@ -1,8 +1,10 @@
 import clsx from 'clsx';
 import s from './Button.module.css';
+import Loader from '@atoms/loader/Loader';
 
 type Props = {
   text: string;
+  disabled?: boolean;
   className?: string;
   isLoading?: boolean;
   onClick?: () => void;
@@ -12,6 +14,7 @@ type Props = {
 function Button({
   text,
   onClick,
+  disabled,
   className,
   isLoading,
   intent = 'primary',
@@ -19,10 +22,10 @@ function Button({
   return (
     <button
       type="button"
-      disabled={isLoading}
-      className={clsx(s.root, s[intent], className, isLoading && s.loading)}
+      disabled={disabled || isLoading}
+      className={clsx(s.root, s[intent], className, disabled && s.loading)}
       onClick={onClick}>
-      {text}
+      {isLoading ? <Loader size={18} color="#b2b5bb" /> : text}
     </button>
   );
 }

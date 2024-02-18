@@ -61,3 +61,16 @@
   width: 28px;
   height: 28px;
 }
+
+.link {
+  margin: 0;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--white);
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

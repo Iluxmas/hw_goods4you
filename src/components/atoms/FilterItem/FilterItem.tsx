@@ -1,21 +1,18 @@
+import { useState } from 'react';
+import clsx from 'clsx';
 import Title from '@atoms/Title/Title';
 
 import s from './FilterItem.module.css';
-import { useState } from 'react';
-import clsx from 'clsx';
 
 type Props = {
   text: string;
-  onToggle: (v: boolean) => void;
+  isChecked: boolean;
+  onSelect: (v: boolean) => void;
 };
 
-function FilterItem({ text, onToggle }: Props) {
-  const [isChecked, setIsChecked] = useState(false);
-
+function FilterItem({ text, onSelect, isChecked }: Props) {
   const handleChange = (e: any) => {
-    console.log(e);
-    onToggle(e.target.checked);
-    setIsChecked(e.target.checked);
+    onSelect(e.target.checked);
   };
 
   return (
@@ -28,7 +25,7 @@ function FilterItem({ text, onToggle }: Props) {
         className={s.input}
         onChange={handleChange}
       />
-      <Title text={text} />
+      <Title text={text} className={s.text} />
     </label>
   );
 }

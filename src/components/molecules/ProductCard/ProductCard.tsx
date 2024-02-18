@@ -3,18 +3,24 @@ import Title from '@atoms/Title/Title';
 import Image from '@atoms/Image/Image';
 
 import s from './ProductCard.module.css';
+import { Link } from 'react-router-dom';
 
 type Props = {
   name: string;
   photo: string;
   price: number;
+  id: number;
 };
 
-function ProductCard({ photo, name, price }: Props) {
+function ProductCard({ photo, name, price, id }: Props) {
   return (
     <div className={s.root}>
-      <Image src={photo} className={s.image} />
-      <Title text={name} className={s.title} />
+      <div className={s.imageWrapper}>
+        <Image src={photo} />
+      </div>
+      <Link to={`/products/${id}`} className={s.title}>
+        <Title text={name} className={s.title} />
+      </Link>
       <Price value={price} />
     </div>
   );

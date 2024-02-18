@@ -13,6 +13,13 @@ export interface IGetProductsResponse {
   limit: number;
 }
 
+export interface IGetProductsRequest {
+  q: string;
+  limit?: number;
+  skip?: number;
+  select?: string[];
+}
+
 export interface IProduct {
   id: number;
   title: string;

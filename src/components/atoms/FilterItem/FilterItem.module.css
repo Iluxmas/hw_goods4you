@@ -9,8 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 14px;
-  padding-bottom: 12px;
+  padding: 14px 8px 12px;
   cursor: pointer;
   transition: background-color 0.15s ease;
 
@@ -48,4 +47,7 @@
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+.text {
+  text-align: center;
 }

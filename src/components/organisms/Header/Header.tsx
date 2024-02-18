@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import clsx from 'clsx';
 import Logo from '@atoms/Logo/Logo';
-import NavItem from '@atoms/NavItem/NavItem';
 import NavBar from '@molecules/NavBar/NavBar';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Container from '@atoms/Container/Container';
 import MobileMenu from '@organisms/MobileMenu/MobileMenu';
 import { ReactComponent as BurgerIcon } from '@/icons/burger-menu.svg';
@@ -22,7 +21,9 @@ function Header() {
         <Logo />
         <div className={s.navbarWrapper}>
           {isHomePage && <NavBar className={s.navbar} />}
-          <NavItem href="/products" text="For staff" />
+          <Link to="/products" className={s.link}>
+            For staff
+          </Link>
           <button
             aria-label="Open nav menu"
             className={s.burgerButton}

@@ -32,6 +32,23 @@
   margin-bottom: 3px;
 }
 
+.filter {
+  display: flex;
+  overflow-y: scroll;
+  scroll-snap-type: x mandatory;
+  border: solid var(--border-peach);
+  border-width: 1px 0 0 1px;
+  margin-bottom: 24px;
+  padding-bottom: 1px;
+
+  @media screen and (min-width: 768px) {
+    overflow-y: hidden;
+    margin-bottom: 32px;
+    grid-template-columns: 1fr 1fr;
+    flex-wrap: wrap;
+  }
+}
+
 .button {
   @media screen and (min-width: 768px) {
     margin: 0 auto 35px;

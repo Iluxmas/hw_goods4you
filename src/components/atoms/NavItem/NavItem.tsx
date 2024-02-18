@@ -1,24 +1,46 @@
 import clsx from 'clsx';
-import { Link } from 'react-router-dom';
 
 import s from './NavItem.module.css';
 
 type Props = {
-  href: string | { pathname: string; hash: string };
+  href: string;
   text: string;
   className?: string;
   children?: React.ReactNode;
 };
 
 function NavItem({ text, className, href, children }: Props) {
+  function scrollTo(element: any, to: any, duration: any) {
+    if (duration <= 0) return;
+    const difference = to - element.scrollTop;
+    const perTick = (difference / duration) * 10;
+
+    setTimeout(function () {
+      element.scrollTop = element.scrollTop + perTick;
+      if (element.scrollTop === to) return;
+      scrollTo(element, to, duration - 10);
+    }, 10);
+  }
+
   return (
-    <Link
-      to={href}
+    <a
+      href={href}
       className={clsx(s.root, className)}
-      aria-label={`navigate to ${text}`}>
+      aria-label={`navigate to ${text}`}
+      onClick={(e) => {
+        e.preventDefault();
+        const elem = document.querySelector(href) as HTMLElement;
+        if (elem) {
+          scrollTo(
+            document.getElementsByTagName('html')[0],
+            elem.offsetTop,
+            500
+          );
+        }
+      }}>
       <p className={s.text}>{text}</p>
       {!!children && children}
-    </Link>
+    </a>
   );
 }
 

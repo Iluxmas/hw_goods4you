@@ -1,8 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 const BASE_URL = process.env.REACT_APP_DUMMY_API_URL;
-console.log('BASE_URL');
-console.log(BASE_URL);
 export const baseApi = createApi({
   reducerPath: 'api',
   baseQuery: fetchBaseQuery({
@@ -12,6 +10,6 @@ export const baseApi = createApi({
       return headers;
     },
   }),
-  tagTypes: [],
+  tagTypes: ['categories'],
   endpoints: () => ({}),
 });

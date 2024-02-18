@@ -1,28 +1,45 @@
-import React, { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Search from '@molecules/Search/Search';
 import Heading from '@atoms/Heading/Heading';
 import Container from '@atoms/Container/Container';
-import { useGetWithFilter, useSearch } from '@/shared/store/api/productsApi';
 import ProductsList from '@organisms/ProductsList/ProductsList';
+import { useGetWithFilter, useSearch } from '@/shared/store/api/productsApi';
 
 import s from './ProductsSearch.module.css';
 
 function ProductsSearch() {
-  const [limit, setLimit] = useState(9);
+  const [currPage, setCurrPage] = useState(1);
   const [query, setQuery] = useState('');
 
   const { data: dataProducts, isFetching: isLoadingMore } = useGetWithFilter(
-    { limit: limit },
+    { limit: currPage * 9 },
     { refetchOnMountOrArgChange: true }
   );
 
   console.log(dataProducts);
-  const { data, isFetching } = useSearch(query, {
-    skip: query.length < 3,
-    refetchOnMountOrArgChange: true,
-  });
 
-  const products = data?.products;
+  const {
+    data: foundProducts,
+    isLoading,
+    isFetching,
+  } = useSearch(
+    { q: query, limit: currPage * 9 },
+    {
+      skip: query.length < 3,
+      refetchOnMountOrArgChange: true,
+    }
+  );
+
+  useEffect(() => {
+    setCurrPage(1);
+  }, [query]);
+
+  const products = foundProducts?.products;
+
+  const showMoreBtn =
+    query && foundProducts
+      ? foundProducts.total / 9 > currPage
+      : (dataProducts?.total || 1) / 9 > currPage;
 
   return (
     <Container className={s.root}>
@@ -30,9 +47,10 @@ function ProductsSearch() {
       <Search onQueryChange={(val) => setQuery(val)} isLoading={isFetching} />
       <ProductsList
         products={query ? products : dataProducts?.products}
-        onLoadMore={() => setLimit(limit + 9)}
+        showMoreBtn={showMoreBtn}
+        onLoadMore={() => setCurrPage((prev) => prev + 1)}
         isLoadingMore={isLoadingMore}
-        isLoading={isFetching}
+        isLoading={isLoading}
       />
     </Container>
   );

@@ -7,6 +7,7 @@ import s from './ProductsList.module.css';
 
 type Props = {
   isLoading?: boolean;
+  showMoreBtn: boolean;
   products?: IProduct[];
   isLoadingMore?: boolean;
   onLoadMore?: () => void;
@@ -16,6 +17,7 @@ function ProductsList({
   products,
   isLoading,
   onLoadMore,
+  showMoreBtn,
   isLoadingMore,
 }: Props) {
   return (
@@ -28,13 +30,14 @@ function ProductsList({
             {products?.map(({ thumbnail, title, price, id }) => (
               <ProductCard
                 key={id}
+                id={id}
                 photo={thumbnail}
                 name={title}
                 price={price}
               />
             ))}
           </div>
-          {products && (
+          {showMoreBtn && (
             <Button
               text="Show more"
               onClick={onLoadMore}

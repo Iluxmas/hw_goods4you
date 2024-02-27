@@ -19,10 +19,13 @@ function Catalog() {
     { skip: !!category }
   );
 
-  const { data: productsData } = useGetProductsByCategory(category, {
-    skip: !category,
-    refetchOnMountOrArgChange: true,
-  });
+  const { data: productsData } = useGetProductsByCategory(
+    { category, limit: 9 },
+    {
+      skip: !category,
+      refetchOnMountOrArgChange: true,
+    }
+  );
 
   const handleReset = () => setCurrPage(1);
   const hadnleSubmit = (value: string) => setCategory(value);

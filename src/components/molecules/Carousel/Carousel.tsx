@@ -28,6 +28,7 @@ function Carousel({ images }: Props) {
       <div className={s.previews}>
         {images.map((el, idx) => (
           <div
+            key={idx}
             className={clsx(s.previewItem, selected === idx && s.selected)}
             onClick={() => setSelected(idx)}>
             <Image src={el} className={s.previewImage} />

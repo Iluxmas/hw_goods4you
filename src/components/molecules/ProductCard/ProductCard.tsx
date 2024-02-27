@@ -1,9 +1,9 @@
 import Price from '@atoms/Price/Price';
 import Title from '@atoms/Title/Title';
 import Image from '@atoms/Image/Image';
+import { Link } from 'react-router-dom';
 
 import s from './ProductCard.module.css';
-import { Link } from 'react-router-dom';
 
 type Props = {
   name: string;

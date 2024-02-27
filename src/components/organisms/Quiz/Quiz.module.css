@@ -20,18 +20,45 @@
 }
 
 .header {
+  height: 76px;
+  overflow: hidden;
+  gap: 8px;
+}
+
+.headerPageOne {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  transform: translateY(0);
+  transition: transform 0.25s ease;
+
+  &.hide {
+    transform: translateY(-200px);
+  }
+}
+
+.headerPageTwo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transform: translateY(-64px);
+  transition: transform 0.25s ease;
+
+  &.hide {
+    transform: translateY(200px);
+  }
 }
 
 .content {
   border: solid var(--gray-40);
   border-width: 1px 0 1px 0;
-  padding: 20px 0 60px;
+}
+
+.contentWrapper {
+  padding: 20px 0 39px;
   display: flex;
   flex-direction: column;
-  gap: 33px;
+  gap: 32px;
 }
 
 .subtitle {
@@ -46,6 +73,7 @@
 }
 
 .button {
+  min-width: 148px;
   padding: 13.5px 42px;
 }
 
@@ -53,4 +81,19 @@
   color: var(--gray-40);
   font-weight: 600;
   font-size: 16px;
+  line-height: 23px;
+}
+
+.topProducts {
+  height: 428px;
+  background-color: var(--border-peach);
+  margin: 16px 0;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 35px 40px;
+  justify-content: space-between;
 }

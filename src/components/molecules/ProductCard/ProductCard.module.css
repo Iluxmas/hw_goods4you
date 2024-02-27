@@ -13,11 +13,20 @@
     color: var(--brand-red);
   }
 }
+
 .imageWrapper {
   display: flex;
+  max-height: 280px;
+  border-radius: 4px;
+  overflow: hidden;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   flex-grow: 1;
   margin-bottom: 10px;
+
+  & img {
+    max-height: 280px;
+    object-position: top;
+  }
 }

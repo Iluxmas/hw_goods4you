@@ -33,3 +33,13 @@ export interface IProduct {
   thumbnail: string;
   images: string[];
 }
+
+export interface IUpdateProductRequest {
+  id: number;
+  data: Partial<IProduct>;
+}
+
+export interface IGetCategoryProductsRequest {
+  category: string;
+  limit?: number;
+}

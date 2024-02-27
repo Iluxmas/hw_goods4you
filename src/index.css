@@ -34,8 +34,10 @@ body {
   --gray-90: #f6f6f6;
 
   --brand-red: #f14f4f;
+  --red: red;
   --biege: #fff4ee;
   --purple: #484283;
   --border-peach: #dbbba9;
+
   --fade-50: rgba(36, 36, 36, 0.5);
 }

@@ -5,16 +5,20 @@
   font-weight: 700;
   font-size: 22px;
   line-height: 1.44;
+}
 
-  &.white {
-    color: var(--white);
-  }
+.root.white {
+  color: var(--white);
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .root {
     font-size: 26px;
   }
+}
 
-  @media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
+  .root {
     font-size: 30px;
   }
 }

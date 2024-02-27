@@ -2,10 +2,10 @@
   text-decoration: none;
   color: var(--white);
   transition: opacity 0.2s ease;
+}
 
-  &:hover {
-    opacity: 0.8;
-  }
+.root:hover {
+  opacity: 0.8;
 }
 
 .text {

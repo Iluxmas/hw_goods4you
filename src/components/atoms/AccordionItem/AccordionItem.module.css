@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: space-between;
 }
+
 .expandBtn {
   width: 25px;
   height: 25px;
@@ -23,10 +24,10 @@
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeatC;
+}
 
-  &.open {
-    transform: rotate(45deg);
-  }
+.expandBtn.open {
+  transform: rotate(45deg);
 }
 
 .footer {
@@ -36,14 +37,14 @@
   transition:
     max-height 200ms ease,
     opacity 200ms ease;
+}
 
-  &.open {
-    max-height: 1000px;
-    opacity: 1;
-    transition:
-      max-height 600ms ease,
-      opacity 200ms ease;
-  }
+.footer.open {
+  max-height: 1000px;
+  opacity: 1;
+  transition:
+    max-height 600ms ease,
+    opacity 200ms ease;
 }
 
 .question {

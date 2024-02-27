@@ -1,7 +1,9 @@
 .root {
   padding: 0;
+}
 
-  @media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
+  .root {
     padding: 60px 0;
   }
 }
@@ -9,12 +11,16 @@
 .wrapper {
   background-color: var(--biege);
   padding: 20px 20px;
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .wrapper {
     padding: 20px 40px;
   }
+}
 
-  @media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
+  .wrapper {
     padding: 20px 100px;
   }
 }
@@ -31,10 +37,10 @@
   gap: 8px;
   transform: translateY(0);
   transition: transform 0.25s ease;
+}
 
-  &.hide {
-    transform: translateY(-200px);
-  }
+.headerPageOne.hide {
+  transform: translateY(-200px);
 }
 
 .headerPageTwo {
@@ -43,10 +49,10 @@
   gap: 8px;
   transform: translateY(-64px);
   transition: transform 0.25s ease;
+}
 
-  &.hide {
-    transform: translateY(200px);
-  }
+.headerPageTwo.hide {
+  transform: translateY(200px);
 }
 
 .content {

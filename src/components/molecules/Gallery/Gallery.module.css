@@ -3,28 +3,29 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   padding: 0 40px;
+}
 
-  @media screen and (max-width: 768px) {
-    & > div:nth-child(4n + 1) {
-      transform: translateX(25px);
-    }
-    & > div:nth-child(4n + 2) {
-      transform: translateX(25px);
-    }
-    & > div:nth-child(4n + 3) {
-      transform: translateX(-25px);
-    }
-    & > div:nth-child(4n + 4) {
-      transform: translateX(-25px);
-    }
+@media screen and (max-width: 768px) {
+  .root > div:nth-child(4n + 1) {
+    transform: translateX(25px);
   }
+  .root > div:nth-child(4n + 2) {
+    transform: translateX(25px);
+  }
+  .root > div:nth-child(4n + 3) {
+    transform: translateX(-25px);
+  }
+  .root > div:nth-child(4n + 4) {
+    transform: translateX(-25px);
+  }
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .root {
     padding: 0;
     grid-template-columns: repeat(3, 1fr);
-
-    & > div:nth-child(3n + 2) {
-      transform: translateY(100px);
-    }
+  }
+  .root > div:nth-child(3n + 2) {
+    transform: translateY(100px);
   }
 }

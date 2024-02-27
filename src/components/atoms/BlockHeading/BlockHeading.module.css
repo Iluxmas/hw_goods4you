@@ -3,8 +3,10 @@
   user-select: none;
   font-weight: 600;
   font-size: 1.2rem;
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .root {
     font-size: 1.5rem;
   }
 }

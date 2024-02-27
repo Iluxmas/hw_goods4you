@@ -5,18 +5,17 @@
   top: 0;
   background-color: var(--biege);
   right: 0;
-  /* width: 100%; */
   height: 100vh;
   max-width: 280px;
   transform: translateX(100vw);
   transition: transform 0.4s ease;
   position: absolute;
   display: none;
+}
 
-  &.show {
-    display: block;
-    transform: translateX(0vw);
-  }
+.root.show {
+  display: block;
+  transform: translateX(0vw);
 }
 
 .navbar {

@@ -3,13 +3,17 @@
   background-color: var(--purple);
   padding-top: 36px;
   padding-bottom: 64px;
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .root {
     padding-top: 48px;
     padding-bottom: 192px;
   }
+}
 
-  @media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
+  .root {
     padding-top: 60px;
     padding-bottom: 240px;
   }
@@ -22,8 +26,10 @@
 
 .heading {
   margin-bottom: 26px;
+}
 
-  @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
+  .heading {
     padding-left: 15px;
   }
 }

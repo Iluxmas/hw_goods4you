@@ -26,14 +26,14 @@
   justify-content: center;
   gap: 8px;
   transition: opacity 0.4s ease-out;
+}
 
-  &:hover {
-    opacity: 1;
-  }
+.overlay:hover {
+  opacity: 1;
+}
 
-  &:active {
-    opacity: 1;
-  }
+.overlay:active {
+  opacity: 1;
 }
 
 .name {

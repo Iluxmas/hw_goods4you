@@ -1,8 +1,10 @@
 .root {
   width: 100%;
   background-color: var(--purple);
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .root {
     z-index: 100;
     position: absolute;
     top: 0;
@@ -19,28 +21,31 @@
   padding-top: 25px;
   padding-bottom: 25px;
   box-sizing: border-box;
-
-  &.home {
-    padding-bottom: 8px;
-    padding-top: 15px;
-    border-bottom: 1px solid var(--white-50);
-  }
 }
 
+.wrapper.home {
+  padding-bottom: 8px;
+  padding-top: 15px;
+  border-bottom: 1px solid var(--white-50);
+}
 .navbarWrapper {
   display: flex;
   position: relative;
   flex-direction: row;
+}
 
-  @media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
+  .navbarWrapper {
     gap: 36px;
   }
 }
 
 .navbar {
   display: none;
+}
 
-  @media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
+  .navbar {
     display: flex;
   }
 }
@@ -51,8 +56,10 @@
   width: min-content;
   display: flex;
   margin-left: 24px;
+}
 
-  @media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
+  .burgerButton {
     display: none;
   }
 }
@@ -69,8 +76,8 @@
   font-weight: 600;
   text-decoration: none;
   color: var(--white);
+}
 
-  &:hover {
-    opacity: 0.8;
-  }
+.link:hover {
+  opacity: 0.8;
 }

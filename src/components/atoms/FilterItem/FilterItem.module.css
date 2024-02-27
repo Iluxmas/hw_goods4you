@@ -12,31 +12,36 @@
   padding: 14px 8px 12px;
   cursor: pointer;
   transition: background-color 0.15s ease;
+}
 
-  &:hover {
-    background-color: var(--border-peach);
-  }
+.root:hover {
+  background-color: var(--border-peach);
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .root {
     min-width: unset;
     padding-top: 18px;
     padding-bottom: 16px;
     width: 100%;
   }
-  @media screen and (min-width: 1024px) {
+}
+
+@media screen and (min-width: 1024px) {
+  .root {
     padding-top: 28px;
     padding-bottom: 24px;
     width: 50%;
   }
+}
 
-  &:has(input:focus) {
-    outline: 2px solid var(--gray-20);
-    outline-offset: -4px;
-  }
+.root:has(input:focus) {
+  outline: 2px solid var(--gray-20);
+  outline-offset: -4px;
+}
 
-  &.checked {
-    background-color: var(--border-peach);
-  }
+.root.checked {
+  background-color: var(--border-peach);
 }
 
 .input {
@@ -48,6 +53,7 @@
   white-space: nowrap;
   width: 1px;
 }
+
 .text {
   text-align: center;
 }

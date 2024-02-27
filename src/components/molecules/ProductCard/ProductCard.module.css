@@ -9,9 +9,10 @@
   white-space: nowrap;
   text-decoration: none !important;
   transition: all 0.2s easew;
-  &:hover {
-    color: var(--brand-red);
-  }
+}
+
+.title:hover {
+  color: var(--brand-red);
 }
 
 .imageWrapper {
@@ -24,9 +25,9 @@
   flex-shrink: 0;
   flex-grow: 1;
   margin-bottom: 10px;
+}
 
-  & img {
-    max-height: 280px;
-    object-position: top;
-  }
+.imageWrapper img {
+  max-height: 280px;
+  object-position: top;
 }

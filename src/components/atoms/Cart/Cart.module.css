@@ -21,11 +21,11 @@
   align-items: center;
   justify-content: center;
   line-height: 14px;
+}
 
-  &.double {
-    width: 22px;
-    right: -8px;
-  }
+.badge.double {
+  width: 22px;
+  right: -8px;
 }
 
 .cartItem {

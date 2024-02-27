@@ -9,25 +9,33 @@
   gap: 20px;
   justify-content: space-between;
   padding: 19px 16px;
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .wrapper {
     align-items: center;
   }
+}
 
-  @media screen and (min-width: 960px) {
+@media screen and (min-width: 960px) {
+  .wrapper {
     flex-direction: row;
     align-items: center;
   }
+}
 
-  @media screen and (min-width: 1212px) {
+@media screen and (min-width: 1212px) {
+  .wrapper {
     padding: 19px 0;
   }
 }
 
 .navbar {
   flex-direction: column;
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .navbar {
     flex-direction: row;
   }
 }

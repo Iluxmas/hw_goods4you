@@ -12,8 +12,10 @@
   justify-content: space-between;
   padding-top: 32px;
   margin-bottom: -30px;
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .wrapper {
     margin-bottom: 0;
     padding-top: 0;
     flex-direction: row;
@@ -26,8 +28,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
 
-  @media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
+  .textBlock {
     max-width: 460px;
   }
 }
@@ -36,8 +40,10 @@
   margin-top: 8px;
   margin-bottom: 24px;
   white-space: pre-line;
+}
 
-  @media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
+  .subtitle {
     margin-bottom: 42px;
     max-width: 380px;
   }
@@ -60,15 +66,19 @@
   display: flex;
   clip-path: polygon(0% 0%, 100% 26%, 100% 100%, 0% 74%);
   transform: translateY(-30px);
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .imageWrapper {
     overflow: hidden;
     flex-direction: row;
     transform: translateY(0) scale(1.05) translateX(30px);
     clip-path: polygon(26% 0%, 95% 0%, 74% 100%, 5% 100%);
   }
+}
 
-  @media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
+  .imageWrapper {
     width: 680px;
     height: 580px;
     clip-path: polygon(26% 0%, 100% 0%, 74% 100%, 0% 100%);

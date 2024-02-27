@@ -8,7 +8,7 @@ import DefaultTemplate from '@templates/DefaultTemplate/DefaultTemplate';
 function ProductPage() {
   const { id } = useParams();
 
-  const { data } = useGetProduct(id as string, {
+  const { data, error, isLoading } = useGetProduct(id as string, {
     skip: !id,
     refetchOnMountOrArgChange: true,
   });
@@ -16,8 +16,8 @@ function ProductPage() {
   return (
     <DefaultTemplate
       header={<Header />}
-      title={<Heading>Product {data?.id}</Heading>}
-      content={<Product data={data} />}
+      title={<Heading>{data ? `Product ${data?.id}` : ''}</Heading>}
+      content={<Product data={data} isLoading={isLoading} />}
     />
   );
 }

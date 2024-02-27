@@ -24,7 +24,6 @@ function ProductsSearch() {
   } = useSearch(
     { q: query, limit: currPage * 9 },
     {
-      skip: query.length < 3,
       refetchOnMountOrArgChange: true,
     }
   );

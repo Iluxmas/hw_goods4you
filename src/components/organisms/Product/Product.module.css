@@ -14,3 +14,11 @@
 .loader {
   margin: 0 auto;
 }
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  justify-content: center;
+  align-items: center;
+}

@@ -12,8 +12,10 @@ function DefaultTemplate({ header, title, content }: Props) {
   return (
     <main className={s.page}>
       {header}
-      <div className={s.title}>{title}</div>
-      {content}
+      <main className={s.main}>
+        <div className={s.title}>{title}</div>
+        {content}
+      </main>
     </main>
   );
 }

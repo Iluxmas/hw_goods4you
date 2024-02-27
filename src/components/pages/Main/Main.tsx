@@ -12,12 +12,14 @@ function Main() {
   return (
     <MainTemplate>
       <Header />
-      <Hero />
-      <Catalog />
-      <About />
-      <Quiz />
-      <Team />
-      <FAQ />
+      <main>
+        <Hero />
+        <Catalog />
+        <About />
+        <Quiz />
+        <Team />
+        <FAQ />
+      </main>
       <Footer />
     </MainTemplate>
   );

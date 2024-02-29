@@ -37,6 +37,7 @@ function Input({
         <input
           type="text"
           value={value}
+          data-testid="input-id"
           disabled={disabled}
           onChange={onChange}
           className={clsx(s.input, disabled && s.disabled, isError && s.error)}

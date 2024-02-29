@@ -8,7 +8,7 @@ import ReduxProvider from './shared/store/ReduxProvider';
 
 import './index.css';
 
-const router = createBrowserRouter([
+export const routes = [
   {
     path: '/',
     element: <Main />,
@@ -21,7 +21,9 @@ const router = createBrowserRouter([
     path: '/products/:id',
     element: <ProductPage />,
   },
-]);
+];
+
+const router = createBrowserRouter(routes);
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

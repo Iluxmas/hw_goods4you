@@ -22,6 +22,7 @@ function Button({
 }: Props) {
   return (
     <button
+      data-testid="button-test-id"
       type="button"
       disabled={disabled || isLoading}
       className={clsx(

@@ -1,5 +1,5 @@
 .root {
-  width: 45%;
+  width: 100%;
   min-width: 124px;
   box-sizing: border-box;
   border: solid var(--border-peach);
@@ -23,7 +23,6 @@
     min-width: unset;
     padding-top: 18px;
     padding-bottom: 16px;
-    width: 100%;
   }
 }
 
@@ -31,7 +30,7 @@
   .root {
     padding-top: 28px;
     padding-bottom: 24px;
-    width: 50%;
+    /* width: 50%; */
   }
 }
 

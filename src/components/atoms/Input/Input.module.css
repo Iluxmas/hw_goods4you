@@ -38,3 +38,9 @@
 input[type='number'] {
   -moz-appearance: textfield;
 }
+
+@media (max-width: 1024px) {
+  .input {
+    width: 50%;
+  }
+}

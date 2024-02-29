@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Input from '@atoms/Input/Input';
 import Button from '@atoms/Button/Button';
 import useEditProduct from '@/utils/useEditProduct';
+import { getFinalPrice } from '@/utils/getFinalPrice';
 import { IProduct } from '@/shared/store/api/dto/apiDto';
 import BlockHeading from '@atoms/BlockHeading/BlockHeading';
 import { ReactComponent as StarIcon } from '@/icons/star.svg';
@@ -9,9 +10,6 @@ import { useUpdateProduct } from '@/shared/store/api/productsApi';
 import DescriptionItem from '@atoms/DescriptionItem/DescriptionItem';
 
 import s from './ProductDescription.module.css';
-
-const getFinalPrice = (pr: number, disc: number) =>
-  ((pr * (100 - disc)) / 100).toFixed(2) + '$';
 
 type Props = {
   data: IProduct;

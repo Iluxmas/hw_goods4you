@@ -28,7 +28,12 @@
 .header {
   height: 76px;
   overflow: hidden;
-  gap: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    height: auto;
+  }
 }
 
 .headerPageOne {
@@ -91,15 +96,22 @@
 }
 
 .topProducts {
-  height: 428px;
-  background-color: var(--border-peach);
-  margin: 16px 0;
-  border-radius: 4px;
   width: 100%;
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  height: 428px;
+  margin: 16px 0;
   padding: 35px 40px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: var(--border-peach);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   justify-content: space-between;
+  gap: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .topProducts {
+    height: auto;
+    grid-template-columns: 1fr;
+  }
 }

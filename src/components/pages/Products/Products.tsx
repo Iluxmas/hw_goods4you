@@ -7,7 +7,7 @@ function Products() {
   return (
     <DefaultTemplate
       header={<Header />}
-      title={<Heading>All products</Heading>}
+      title={<Heading data-testid="products-header">All products</Heading>}
       content={<ProductsSearch />}
     />
   );

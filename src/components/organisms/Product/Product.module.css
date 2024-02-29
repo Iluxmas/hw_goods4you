@@ -11,6 +11,12 @@
   gap: 42px;
 }
 
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+}
+
 .loader {
   margin: 0 auto;
 }

@@ -28,6 +28,7 @@ function CheckBox({ onToggle, label, isLoading, initialState }: Props) {
       </span>
       <Title text={label} />
       <input
+        data-testid="checkbox-test-id"
         type="checkbox"
         checked={isChecked}
         className={s.input}

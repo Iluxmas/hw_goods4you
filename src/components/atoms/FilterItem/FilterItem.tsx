@@ -16,6 +16,7 @@ function FilterItem({ text, onSelect, isChecked }: Props) {
 
   return (
     <label
+      data-testid="filter-checkbox-id"
       className={clsx(s.root, isChecked && s.checked)}
       aria-label={`add ${text} category to listed catalog`}>
       <input

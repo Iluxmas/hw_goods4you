@@ -1,16 +1,16 @@
 import { useState } from 'react';
+import clsx from 'clsx';
 import Button from '@atoms/Button/Button';
 import Heading from '@atoms/Heading/Heading';
 import Subtitle from '@atoms/Subtitle/Subtitle';
 import Container from '@atoms/Container/Container';
 import BlockHeading from '@atoms/BlockHeading/BlockHeading';
 import OptionsList from '@organisms/OptionsList/OptionsList';
+import ProductCard from '@molecules/ProductCard/ProductCard';
 import { useLazyGetCategoryProducts } from '@/shared/store/api/productsApi';
 import { IGetProductsResponse, IProduct } from '@/shared/store/api/dto/apiDto';
 
 import s from './Quiz.module.css';
-import ProductCard from '@molecules/ProductCard/ProductCard';
-import clsx from 'clsx';
 
 function Quiz() {
   const [selectedItems, setSelectedItems] = useState<string[]>([]);

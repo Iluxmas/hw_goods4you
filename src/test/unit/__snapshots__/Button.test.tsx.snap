@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`
+🔵 Button should work Should change the class with different isloading/disabled props 1`] = `
+<button
+  className="root primary"
+  data-testid="button-test-id"
+  disabled={false}
+  type="button"
+>
+  Test me
+</button>
+`;
+
+exports[`
+🔵 Button should work Should change the class with different isloading/disabled props 2`] = `
+<button
+  className="root primary disabled"
+  data-testid="button-test-id"
+  disabled={true}
+  type="button"
+>
+  Test me
+</button>
+`;

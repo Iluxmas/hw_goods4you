@@ -3,6 +3,10 @@ import renderer, { ReactTestRendererJSON } from 'react-test-renderer';
 import { render, screen } from '@testing-library/react';
 import Button from '../../components/atoms/Button/Button';
 
+jest.mock('@atoms/loader/assets/loader.svg', () => ({
+  ReactComponent: 'svg',
+}));
+
 describe('\n🔵 Button should work', function () {
   it('Should change the class with different isloading/disabled props', () => {
     const component = renderer.create(

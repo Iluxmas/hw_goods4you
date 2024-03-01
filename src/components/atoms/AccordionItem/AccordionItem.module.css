@@ -3,6 +3,10 @@
   padding-bottom: 20px;
 }
 
+.root:not(:last-of-type) {
+  border-bottom: 1px solid var(--gray-10);
+}
+
 .header {
   position: relative;
   display: flex;

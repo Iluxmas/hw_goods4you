@@ -1,5 +1,3 @@
-import React from 'react';
-// import { ReactComponent as ExpandIcon } from '@/icons/expand.svg';
 import clsx from 'clsx';
 import { TFAQItem } from '@/types/faqItem';
 import Subtitle from '../Subtitle/Subtitle';

@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import Loader from '@atoms/loader/Loader';
+import Loader from '../loader/Loader';
 
 import s from './Button.module.css';
 
@@ -33,7 +33,7 @@ function Button({
         isLoading && s.loading
       )}
       onClick={onClick}>
-      {isLoading ? <Loader size={18} color="#b2b5bb" /> : text}
+      {isLoading ? <Loader size="small" /> : text}
     </button>
   );
 }

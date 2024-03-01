@@ -18,7 +18,7 @@ function Product({ data, isLoading }: Props) {
   if (isLoading) {
     return (
       <Container className={clsx(s.container, s.centered)}>
-        <Loader size={64} className={s.loader} />
+        <Loader size="large" className={s.loader} />
       </Container>
     );
   }

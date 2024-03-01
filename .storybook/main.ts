@@ -2,17 +2,29 @@ import type { StorybookConfig } from '@storybook/react-webpack5';
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
-  webpackFinal: (config) => {
+  webpackFinal: async (config) => {
     // Default rule for images /\.(svg|ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani|pdf)(\?.*)?$/
-    const fileLoaderRule = this.module.rules.find(
+    const fileLoaderRule = config.module.rules.find(
       (rule) => rule.test && rule.test.test('.svg')
     );
-    fileLoaderRule.exclude = /\.svg$/;
 
-    this.module.rules.push({
+    if (fileLoaderRule) {
+      fileLoaderRule.exclude = /\.svg$/;
+    }
+
+    config.module.rules.push({
       test: /\.svg$/,
-      enforce: 'pre',
-      loader: require.resolve('@svgr/webpack'),
+      use: [
+        {
+          loader: '@svgr/webpack',
+        },
+        {
+          loader: 'file-loader',
+          options: {
+            name: 'static/media/[path][name].[ext]',
+          },
+        },
+      ],
     });
 
     return config;

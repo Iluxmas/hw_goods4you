@@ -23,7 +23,7 @@ function ProductsList({
   return (
     <div className={s.root}>
       {isLoading ? (
-        <Loader size={64} />
+        <Loader size="large" />
       ) : (
         <>
           <div className={s.wrapper}>
